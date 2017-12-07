@@ -1,1 +1,3 @@
-# ml_project
+# RNN Text Generator
+
+Class project for CS 6784, Advanced Topics in Machine Learning
