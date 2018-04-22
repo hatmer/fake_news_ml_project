@@ -1,0 +1,41 @@
+# layer -1: generate GloVe encodings (do outside main code and save to file)
+
+
+
+# layer 0: embed words into 300-D vectors initialized with GloVe encodings
+
+# layer 1: 2-layer RNN, each layer has 1024 GRU cells
+# length of embeddings vectors = 1024
+# dropout probability for cells in output layer of first layer = 0.2 
+# mini-batch stochastic gradient descent
+# anneal the learning rate regularly when validation set fails to improve
+# gradients are backpropaged 35 time steps and clipped to max value = 0.25
+# formula (2)
+
+# layer 2: length model
+
+# layer 3: repetition model
+
+# layer 4: entailment model
+# train with ADAM (rate=0.0005, batch size=128)
+# dropout on MLP hidden layer (rate=0.5)
+# forumla (6)
+
+# layer 5: relevance model
+# train with ADAM (rate=0.001, dropout=0.5)
+# 1-D convolution layer with filter size 3, stride 1
+# pad sequences so that output is same length as input
+# forumulas (7) and (8)
+
+# layer 6: working vocab model
+# predict a centroid in the embedding space from the context
+# compute score with formula (9), loss by formula (10)
+
+# layer 7: lexical style model
+# formulas (11) and (12)
+
+# layer 8: add classification probabilities to objective fxn as log probabilities
+# learn weighting scheme to balance influence of scores (combined objective)
+# meta-weight training done with SGD (rate=1)
+# formula (13)
+

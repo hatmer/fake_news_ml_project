@@ -1,9 +1,10 @@
 
-# Files
-push.sh
 
-# Directories
-scrap
+.gitignore
+.ipynb_checkpoints
+
+glove300.txt
+
+data/*
 scrap/*
-vectors
-vectors/*
+venv/*
