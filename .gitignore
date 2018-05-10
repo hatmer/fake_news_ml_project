@@ -3,8 +3,6 @@
 .gitignore
 .ipynb_checkpoints
 
-glove300.txt
-
 data/*
 scrap/*
 venv/*
